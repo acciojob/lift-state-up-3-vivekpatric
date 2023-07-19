@@ -1,12 +1,12 @@
 import React,{useState} from "react";
 import Child1 from "./Child1";
 import Child2 from "./Child2";
-import { event } from "cypress/types/jquery";
+
 
 const Parent =()=>{
         const [selectedOption,setSelectedOption] =useState("");
         const getText=(event)=>{
-            selectedOption(event.target.innerHTML);
+            setSelectedOption(event.target.innerHTML);
             console.log(event.target.innerHTML);
         }
     return(
@@ -18,3 +18,4 @@ const Parent =()=>{
         </div>
     )
 }
+export default Parent
